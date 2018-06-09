@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class Solution2 {
     public static void main(String[] args) {
         int[] numbers = {3, 0, 0, 3, 0, 0, 3, 0, 0, 3};
-        int[][] dublicateNumbres = new int[2][(int) (numbers.length / 2)];
-        for (int i = 1; i < (int) (numbers.length / 2); i++)
+        int[][] dublicateNumbres = new int[2][ numbers.length / 2];
+        for (int i = 1; i < numbers.length / 2; i++)
             dublicateNumbres[0][i] = numbers[i] - 100;
         int numberOfRepetitions = 0;
         int secondDublicat = 0;
@@ -19,7 +19,7 @@ public class Solution2 {
                 }
             }
             if (countsDublicate != 1) {
-                for (int k = 0; k < dublicateNumbres.length; k++)
+                for (int k = 0; k < numbers.length / 2; k++)
                     if (numbers[i] == dublicateNumbres[0][k]) {
                         secondDublicat++;
                     }
